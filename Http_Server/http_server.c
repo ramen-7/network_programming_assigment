@@ -46,7 +46,7 @@ int main()
 {
     load_Config();
     FILE *html_data;//holds the data
-    path[strlen(path) - 1] = '\0';
+    path[strlen(path) - 1] = '\0';//removing \n from path which will cause error in reading of index.html
     html_data = fopen(strcat(path, "index.html"), "r");//since we are only reading from the file
     //printf("html data: %s\n", html_data);
     if(html_data == NULL)
